@@ -5,5 +5,6 @@ export class ACGCustomRenderingPipeline extends PostProcessRenderPipeline {
     private _camerasToBeAttached: Array<Camera> = [];
     constructor(name: string = "", scene: Scene = EngineStore.LastCreatedScene!, cameras?: Camera[]) {
         super(scene.getEngine(), name);
+        scene.enableGeometryBufferRenderer();
     }
 }
