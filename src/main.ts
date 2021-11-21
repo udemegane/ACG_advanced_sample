@@ -21,8 +21,8 @@ class Main {
         canvas.id = "appCanvas";
         document.body.appendChild(canvas);
 
-        const engine = new Engine(canvas, true);
-        const scene = new Scene(engine);
+        const engine: Engine = new Engine(canvas, true);
+        const scene: Scene = new Scene(engine);
 
         const camera: ArcRotateCamera = new ArcRotateCamera("Camera", Math.PI / 2.0, Math.PI / 2.0, 2.0, Vector3.Zero(), scene);
         camera.attachControl(canvas, true);
